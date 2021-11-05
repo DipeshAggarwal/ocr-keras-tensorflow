@@ -22,6 +22,6 @@ def load_az_dataset(dataset_path):
 def load_mnist_dataset():
     (train_data, train_label), (test_data, test_label) = mnist.load_data()
     data = np.vstack([train_data, test_data])
-    labels = np.vstack([train_label, test_label])
+    labels = np.hstack([train_label, test_label])
     
     return data, labels
